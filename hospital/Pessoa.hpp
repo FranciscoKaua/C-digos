@@ -2,21 +2,20 @@
 #define PESSOA_HPP
 
 #include <string>
-#include <iostream>
-using namespace std;
 
 class Pessoa{
-private:
-    string nome;
+protected:
+    std::string nome;
     int idade;
 public:
-    Pessoa(string nome, int idade);
+    Pessoa(std::string nome, int idade);
     
-    string getNome();
-    int getIdade();
-    string setNome();
-    int setIdade();
-    void exibirInfo() const;
+    std::string getNome() const;
+    int getIdade() const;
+    void setNome(std::string nome);
+    void setIdade(int idade);
+    virtual void exibirInfo() const;
+    
 };
 
 #endif

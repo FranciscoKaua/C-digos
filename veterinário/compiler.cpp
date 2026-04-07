@@ -1,0 +1,5 @@
+#include "main.cpp"
+#include "Animal.cpp"
+#include "Gato.cpp"
+#include "Cachorro.cpp"
+#include "Clinica.cpp"
