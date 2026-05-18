@@ -1,0 +1,1 @@
+/*ultilizando o laço for, colocando outro laço de repetição com condicional se ele é primo ou não*/

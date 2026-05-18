@@ -1,0 +1,1 @@
+/*o loop vai se repetir infinitamente, porque o valor de i não está sendo mudado, o serto seria i++*/

@@ -1,0 +1,1 @@
+/*Serve para representar verdadeiro ou falso*/

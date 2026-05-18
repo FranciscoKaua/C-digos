@@ -1,0 +1,1 @@
+/*cria uma matriz 2x2, para cada linha Y, coloca coluna X*/

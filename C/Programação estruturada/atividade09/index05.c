@@ -1,0 +1,1 @@
+/*ponteiros pode armazenar e alocar endereços de memória*/

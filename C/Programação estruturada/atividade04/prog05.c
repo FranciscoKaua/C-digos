@@ -1,0 +1,1 @@
+/*faça um laço de repetiçao com a condição quando um determinado valor chegar a 0, as operações matemáticas são divisão com resto e multiplicação*/

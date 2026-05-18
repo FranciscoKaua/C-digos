@@ -1,0 +1,1 @@
+/*ela pode aumentar ou diminuir um bloco de memória*/

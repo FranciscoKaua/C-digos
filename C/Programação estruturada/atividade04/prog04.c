@@ -1,0 +1,1 @@
+/*O mais indicado seria o laço while, o comando break  irá parar o loop*/
