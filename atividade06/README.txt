@@ -1,1 +1,0 @@
-g++ Complexo.cpp main.cpp -o main
