@@ -1,0 +1,1 @@
+//Uma arvore binária é caracterizado com cada nó tem no máximo 2 filhos

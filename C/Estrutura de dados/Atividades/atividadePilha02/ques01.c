@@ -1,0 +1,1 @@
+//funciona como uma fila da vida real, o primeiro que entra, é o primeiro que sai

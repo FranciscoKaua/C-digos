@@ -1,0 +1,1 @@
+//ele continua descendo até encontrar um nó sem folhas

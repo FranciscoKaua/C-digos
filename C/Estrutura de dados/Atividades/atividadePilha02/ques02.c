@@ -1,0 +1,1 @@
+//pode ser ultilizadas quando necessitam que os itens sejam executados na ordem que chegam.

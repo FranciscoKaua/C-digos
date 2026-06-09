@@ -1,0 +1,1 @@
+//o acesso é feito através de ponteiros, navegando entre os nós
