@@ -10,8 +10,17 @@ void Livro::emprestar(){
 void Livro::devolver(){
     disponivel = true;
 };
+
+string Livro::getIsbn() const{
+    return isbn;
+}
+
 string Livro::getTitulo() const{
     return titulo;
+}
+
+string Livro::getAutor() const{
+    return autor;
 }
 bool Livro::getDisponivel() const{
     return disponivel;

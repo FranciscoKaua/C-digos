@@ -12,7 +12,9 @@ class Livro{
         Livro(string isbn, string titulo, string autor, bool disponivel=true);
         void emprestar();
         void devolver();
+        string getIsbn() const;
         string getTitulo() const;
+        string getAutor() const;
         bool getDisponivel() const;
 };
 #endif

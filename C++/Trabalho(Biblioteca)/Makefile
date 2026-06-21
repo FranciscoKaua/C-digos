@@ -1,4 +1,4 @@
-CXX = clang++
+CXX = g++
 CXXFLAGS = -Wall -Wextra -std=c++17 -Iinclude
 
 SRC = src/Pessoa.cpp \
@@ -6,7 +6,8 @@ SRC = src/Pessoa.cpp \
       src/Bibliotecario.cpp \
       src/Livro.cpp \
       src/Emprestimo.cpp \
-      src/main.cpp
+      src/BancoDados.cpp \
+      src/main.cpp 
 
 OBJ = $(SRC:.cpp=.o)
 
@@ -15,8 +16,8 @@ EXEC = biblioteca
 all: $(EXEC)
 
 $(EXEC): $(OBJ)
-	$(CXX) $(OBJ) -o $(EXEC)
-
+	$(CXX) $(OBJ) -lsqlite3 -o $(EXEC)
+	
 src/%.o: src/%.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
