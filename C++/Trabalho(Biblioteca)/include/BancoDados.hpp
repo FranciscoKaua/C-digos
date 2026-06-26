@@ -1,6 +1,5 @@
 #ifndef BANCODADOS_HPP
 #define BANCODADOS_HPP
-
 #include <sqlite3.h>
 #include "Livro.hpp"
 #include "Emprestimo.hpp"
@@ -9,21 +8,36 @@
 class BancoDados{
     private:
         sqlite3* db;
-    
     public:
         BancoDados();
         ~BancoDados();
     
         void criarTabelas();
         void salvarLivro(const Livro& livro);
-        void salvarUsuario(const Usuario& u);
-        void salvarEmprestimo(int matricula, string isbn, string dataEmp, string dataDev);
-        void devolverLivro(const string& isbn);
-        void listarLivrosBanco();
-        void listarUsuariosBanco();
+        void atualizarLivro(string isbn,string titulo,string autor);
         void apagarLivro(const string& isbn);
-        void apagarUsuario(int matricula);
+        void listarLivrosBanco();
         
+        void salvarUsuario(const Usuario& u);
+        void atualizarUsuario(int matricula, string nome, string cpf);
+        void apagarUsuario(int matricula);
+        void listarUsuariosBanco();
+        
+        void salvarBibliotecario(const Bibliotecario& b);
+        void atualizarBibliotecario(int codigo, string nome, string cpf);
+        void removerBibliotecario(int codigo);
+        void listarBibliotecarios();
+        
+        void salvarEmprestimo(int matricula, string isbn, string dataEmp, string dataDev);
+        void listarEmprestimos();
+        void atualizarEmprestimo(int id,string dataDevoluca);
+        void removerEmprestimo(int id);
+        
+        void contarLivrosUsuario(int matricula);
+        void contarLivrosAutor(string autor);
+        void contarLivrosDisponiveis();
+        void listarEmprestimosAtrasados();
+                
 };
 
 #endif

@@ -21,6 +21,7 @@ class Bibliotecario: public Pessoa{
         void realizarDevolucao(int indiceLivro);
         void listarLivros();
         void listarUsuarios();
+        int getCodigoFuncionario() const;
         void exibirDados() override;
 };
 #endif

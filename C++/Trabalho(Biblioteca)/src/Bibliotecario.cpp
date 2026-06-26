@@ -62,6 +62,10 @@ void Bibliotecario::listarUsuarios(){
     }
 }
 
+int Bibliotecario::getCodigoFuncionario() const{
+    return codigoFuncionario;
+}
+
 void Bibliotecario::exibirDados(){
     cout << "Bibliotecario" << endl;
     cout << "Nome: " << nome << endl;
