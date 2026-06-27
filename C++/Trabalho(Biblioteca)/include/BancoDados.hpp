@@ -4,6 +4,7 @@
 #include "Livro.hpp"
 #include "Emprestimo.hpp"
 #include "Usuario.hpp"
+#include "Bibliotecario.hpp"
 
 class BancoDados{
     private:
@@ -29,9 +30,9 @@ class BancoDados{
         void listarBibliotecarios();
         
         void salvarEmprestimo(int matricula, string isbn, string dataEmp, string dataDev);
-        void listarEmprestimos();
         void atualizarEmprestimo(int id,string dataDevoluca);
         void removerEmprestimo(int id);
+        void listarEmprestimos();
         
         void contarLivrosUsuario(int matricula);
         void contarLivrosAutor(string autor);
