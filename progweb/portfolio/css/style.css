@@ -1,0 +1,236 @@
+/*Variaveis e bade*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --pagina: white; 
+    --superficie: white; 
+    --texto: black; 
+    --texto-suave: gray; 
+    --destaque: #4ad8a8; 
+    --borda: #4ad8a8; 
+    --raio-borda: 20px; 
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+body{
+    font-family: sans-serif;
+    background-color: var(--pagina);
+    color: var(--texto);
+    line-height: 1.5;
+    transition: background-color 0.5s;
+    transition: color 0.5s;
+}
+img{
+    width: 100%;
+    display: block;
+}
+
+/*cabecalho perfil e seções*/
+.cabecalho{
+    display: flex;
+    background-color: var(--pagina);
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 2px solid var(--borda);
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.marca{
+    font-weight: bold;
+    color: var(--destaque);
+}
+.menu{
+    display: flex;
+    gap: 10px;
+}
+.link-menu{
+    text-decoration: none;
+    color: var(--texto-suave);
+    border-bottom: 2px solid transparent;
+}
+.link-menu:hover{
+    color: var(--destaque);
+    border-bottom: 2px solid var(--destaque);
+}
+.botao-tema{
+    font: inherit;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--texto);
+    padding: 8px;
+    border: 1px solid var(--borda);
+    border-radius: 999px;
+}
+.botao-tema:hover{
+    border: 1px solid var(--destaque);
+    color: var(--destaque);
+}
+.secao{
+    max-width: 900px;
+    margin: auto;
+    padding: 50px 0px;
+}
+.titulo-secao{
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    border-left: 3px solid var(--destaque);
+}
+.cartao-perfil{
+    background-color: var(--superficie);
+    border: 1px solid transparent;
+    border-radius: var(--raio-borda);
+    box-shadow: 0px 1px 10px black;
+    padding: 15px;
+    text-align: center;
+}
+.foto-perfil{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 2px solid var(--destaque);
+    object-fit: cover;
+    margin: auto;
+}
+.titulo-nome, .subtitulo, .localizacao{
+    font-size: 20px;
+}
+.subtitulo, .localizacao{
+    color: var(--texto-suave);
+}
+
+/*Habilidades projetos e rodape*/
+.texto-sobre {
+    color: var(--texto-suave);
+    width: 60ch;
+}
+.lista-habilidades{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.habilidade{
+    padding: 5px;
+    border-radius: 20px;
+    background-color: var(--superficie);
+    border: 1px solid var(--borda);
+    font-size: 10px;
+}
+.titulo-habilidades{
+    margin-top: 10px;
+}
+.contador-habilidades{
+    font-size: 15px;
+    color: var(--texto-suave);
+    margin-top: 15px;
+}
+.filtros{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.filtros > button{
+    background-color: var(--pagina);
+    border: 1px solid var(--borda);
+    border-radius: 20px;
+    padding: 5px;
+    color: var(--texto);
+}
+.grade-projetos{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,
+minmax(260px, 1fr));
+    gap: 15px;
+}
+.cartao-projeto{
+    background-color: var(--superficie);
+    border: 1px solid transparent;
+    border-radius: var(--raio-borda);
+    box-shadow: 0px 1px 10px black;
+    padding: 15px;
+    text-align: left;
+    
+}
+.cartao-projeto > *{
+    margin-bottom: 5px;
+}
+.etiqueta{
+    display: inline-block;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: var(--destaque);
+    color: white;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.titulo-projeto{
+    font-size: 20px;
+}
+.descricao-projeto{
+    color: var(--texto-suave);
+    font-size: 15px;
+}
+.botao-detalhes{
+    border: none;
+    background: none;
+    color: var(--destaque);
+    text-decoration: underline;
+    cursor: pointer;
+    font: inherit;
+}
+.detalhes-projeto{
+    font-size: 15px;
+    color: var(--texto-suave);
+    margin: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed none;
+}
+.rodape{
+    border-top: 2px solid var(--borda);
+}
+.texto-rodape{
+    text-align: center;
+    padding: 10px;
+    background-color: var(--superficie);
+    font-size: 15px;
+    color: var(--texto-suave);
+}
+
+/*Os estados*/
+.oculto{
+    display: none;
+}
+.botao-filtro.ativo{
+    background-color: var(--destaque);
+    color: white;
+    border: 1px solid var(--destaque);
+}
+body.tema-escuro{
+    --pagina: #2c2c2c; 
+    --superficie: #3b3b3b; 
+    --texto: #fff; 
+    --texto-suave: #d7d7d7; 
+    --destaque: #4ad8a8; 
+    --borda: #4ad8a8; 
+}
+
+@media (max-width: 600px){
+    .cabecalho{
+        align-items: center;
+    }
+    .secao{
+        padding: 20px 0px;
+    }
+}

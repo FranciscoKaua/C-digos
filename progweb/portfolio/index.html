@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="cabecalho">
+            <span class="marca"></> meu portfolio</span>
+            <nav class="menu">
+                <a href="#perfil" class="link-menu">Inicio</a>
+                <a href="#sobre" class="link-menu">Sobre</a>
+                <a href="#projetos" class="link-menu">Projetos</a>
+            </nav>
+            <button type="button" class="botao-tema" id="btn-tema">Modo escuro</button>
+    </header>
+    <main>
+        <section class="secao perfil" id="perfil">
+                <div class="cartao-perfil">
+                    <img src="img/alex-suprun-ZHvM3XIOHoE-unsplash.jpg" alt="foto de perfil" class="foto-perfil">
+                    <h1 class="titulo-nome" id="titulo-nome">Seu nome</h1>
+                    <p class="subtitulo" id="subtitulo">Sua funvao</p>
+                    <p class="localizacao">Piripiri, Piauí</p>
+                </div>
+       </section>
+
+       <section class="secao sobre" id="sobre">
+                <h2 class="titulo-secao">Sobre mim</h2>
+                <p class="texto-sobre">
+                    Estudante de Ciencias da Computação na UESPI, 3 periodo. Gosto de construir coisas para web e estou aprendendo a transformar ideias em páginas que funcionam de verdade no navegador. Procuro estágio na área de desenvolvimento.
+                </p>
+                <h3 class="titulo-habilidades">Habilidades</h3>
+                <ul class="lista-habilidades">
+                    <li class="habilidade">HTML</li>
+                    <li class="habilidade">CSS</li>
+                    <li class="habilidade">Javascript</li>
+                    <li class="habilidade">Git</li>
+                    <li class="habilidade">Python</li>
+                    <li class="habilidade">SQL</li>
+                </ul>
+                <p class="contador-habilidades" id="contador-habilidades"> Habilidades</p>
+       </section>
+       
+       <section class="secao projetos" id="projetos">
+                <h2 class="titulo-secao">Projetos</h2>
+                <div class="filtros">
+                    <button class="botao-filtro" type="button" data-categoria="todos" class="ativo">Todos</button>
+                    <button class="botao-filtro" type="button" data-categoria="web">Web</button>
+                    <button class="botao-filtro" type="button" data-categoria="mobile">Mobile</button>
+                    <button class="botao-filtro" type="button" data-categoria="dados">Dados</button>          
+                </div>
+
+                <div class="grade-projetos">
+                    <article class="cartao-projeto" data-categoria="web">
+                            <span class="etiqueta">Web</span>
+                            <h3 class="titulo-projeto">Agenda de Contatos</h3>
+                            <p class="descricao-projeto">Página para cadastrar e listar contatos direto no navegador</p>
+                            <button class="botao-detalhes" type="button">Ver detalhes</button>
+                            <p class="detalhes-projeto oculto">Feito com HTML,
+                                    CSS e JavaScript
+                                    puro. Os contatos
+                                    são guardados em
+                                    um array e a lista é
+                                    redesenhada a cada
+                                    cadastro.
+                            </p>
+                    </article>
+                    <article class="cartao-projeto" data-categoria="mobile">
+                            <span class="etiqueta">mobile</span>
+                            <h3 class="titulo-projeto">Lista de Tarefas</h3>
+                            <p class="descricao-projeto">Aplicativo de tarefas pensado primeiro para a tela do celular</p>
+                            <button class="botao-detalhes" type="button">Ver detalhes</button>
+                            <p class="detalhes-projeto oculto">
+                                Layout responsivo
+                                com CSS Grid,
+                                botões grandes o
+                                suficiente para o
+                                toque e marcação de
+                                tarefa concluída com
+                                uma classe.
+                            </p>
+                    </article>
+                    <article class="cartao-projeto" data-categoria="dados">
+                            <span class="etiqueta">Dados</span>
+                            <h3 class="titulo-projeto">Consulta de Livros</h3>
+                            <p class="descricao-projeto">Busca em um acervo com filtro por autor e por ano</p>
+                            <button class="botao-detalhes" type="button">Ver detalhes</button>
+                            <p class="detalhes-projeto oculto">
+                                Banco de dados em
+                                SQLite, consultas em
+                                SQL e uma interface
+                                de linha de comando
+                                para pesquisar o
+                                acervo.
+                            </p>
+                    </article>
+                    <article class="cartao-projeto" data-categoria="dados">
+                            <span class="etiqueta">Dados</span>
+                            <h3 class="titulo-projeto">Painel de Notas</h3>
+                            <p class="descricao-projeto">Gráficos simples com as notas da turma por simestre</p>
+                            <button class="botao-detalhes" type="button">Ver detalhes</button>
+                            <p class="detalhes-projeto oculto">
+                                Leitura de um arquivo
+                                CSV com Python e
+                                geração dos gráficos
+                                com matplotlib.
+                                Trabalho da
+                                disciplina de
+                                Estatística.
+                            </p>
+                    </article>
+                    <article class="cartao-projeto" data-categoria="web">
+                            <span class="etiqueta">Web</span>
+                            <h3 class="titulo-projeto">Site de Semana de Computação</h3>
+                            <p class="descricao-projeto">Página de divulgação com programação e inscrição do evento</p>
+                            <button class="botao-detalhes" type="button">Ver detalhes</button>
+                            <p class="detalhes-projeto oculto">
+                                Estrutura semântica,
+                                tipografia cuidada e
+                                formulário de
+                                inscrição com
+                                validação básica.
+                                Publicado no GitHub
+                                Pages.
+                            </p>
+                    </article>
+                    <article class="cartao-projeto" data-categoria="mobile">
+                            <span class="etiqueta">Mobile</span>
+                            <h3 class="titulo-projeto">Contador de Água</h3>
+                            <p class="descricao-projeto">Registro diário de copos de água com meta e histórico</p>
+                            <button class="botao-detalhes" type="button">Ver detalhes</button>
+                            <p class="detalhes-projeto oculto">
+                                Interface de uma tela
+                                só, com botões de
+                                somar e zerar.
+                                Exercício de
+                                manipular o mesmo
+                                número em vários
+                                pontos da página
+                            </p>
+                    </article>
+                </div>
+       </section>
+    </main>
+
+    <footer class="rodape">
+            <p class="texto-rodape">
+                Feito por <span id="nome-rodape">Seu nome</span> . Programação Web . <span id="ano">ano</span>
+            </p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
