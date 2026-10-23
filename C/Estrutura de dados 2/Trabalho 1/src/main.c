@@ -10,6 +10,7 @@ int main()
 {
     int opcao;
     int inicio;
+    char arquivo[50] = "../dados/grafo_1.txt";
 
     printf("-----BIBLIOTECA DE GRAFOS----\n");
     
@@ -24,7 +25,7 @@ int main()
     if (opcao == 1) {
 
         GrafoMatriz *grafo =
-            ler_grafo_matriz("dados/grafo.txt");
+            ler_grafo_matriz(arquivo);
 
         if (grafo == NULL)
             return 1;
@@ -33,7 +34,7 @@ int main()
 
         salvar_informacoes_matriz(
             grafo,
-            "resultados/informacoes_matriz.txt"
+            "../resultados/informacoes_matriz.txt"
         );
 
 
@@ -56,7 +57,7 @@ int main()
 
 
         salvar_bfs_matriz(
-            "resultados/bfs_matriz.txt",
+            "../resultados/bfs_matriz.txt",
             grafo->num_vertices,
             pai,
             nivel
@@ -78,7 +79,7 @@ int main()
     else if (opcao == 2) {
 
         GrafoLista *grafo =
-            ler_grafo_lista("dados/grafo.txt");
+            ler_grafo_lista(arquivo);
 
         if (grafo == NULL)
             return 1;
@@ -87,7 +88,7 @@ int main()
 
         salvar_informacoes_lista(
             grafo,
-            "resultados/informacoes_lista.txt"
+            "../resultados/informacoes_lista.txt"
         );
 
 
@@ -110,7 +111,7 @@ int main()
 
 
         salvar_bfs_lista(
-            "resultados/bfs_lista.txt",
+            "../resultados/bfs_lista.txt",
             grafo->num_vertices,
             pai,
             nivel
