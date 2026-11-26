@@ -1,5 +1,5 @@
-Numero de vertices: 49948
-Numero de arestas: 1299794
-Grau minimo: 1
-Grau maximo: 112
-Grau medio: 52.05
+Numero de vertices: 10000
+Numero de arestas: 109977
+Grau minimo: 8
+Grau maximo: 43
+Grau medio: 22.00
